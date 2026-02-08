@@ -6,10 +6,14 @@ Bu proje, Factory Design Pattern’ın Java ile nasıl uygulanabileceğini göst
 Proje, klasik if-else tabanlı nesne oluşturma yaklaşımının neden problemli olduğunu ve bunun yerine daha esnek ve sürdürülebilir bir çözümün nasıl kurulabileceğini göstermektedir.
 
 
+
 Problem Tanımı : 
 
 
+
 Uygulamalarda farklı türlerde nesneler oluşturulması gerektiğinde, çoğu zaman aşağıdaki gibi bir yaklaşım kullanılır:
+
+
 
 if-else veya switch-case blokları
 
@@ -18,7 +22,12 @@ String karşılaştırmaları
 Factory sınıfının sürekli değiştirilmesi
 
 
+
+
 Bu yaklaşım:
+
+
+
 
 Open/Closed Principle (OCP)’ı ihlal eder
 
@@ -27,7 +36,9 @@ Kodun okunabilirliğini düşürür
 Yeni türler eklendikçe bakımı zorlaştırır
 
 
+
 Çözüm Yaklaşımı
+
 
 
 Bu projede, nesne oluşturma mantığı Factory Pattern kullanılarak merkezi bir yapıya taşınmıştır.
@@ -43,7 +54,9 @@ PayPal
 Her ödeme türü Payment arayüzünü implemente eder ve nesne oluşturma işlemi Map + Supplier yapısı üzerinden gerçekleştirilir.
 
 
+
 Bu sayede:
+
 
 
 if-else zincirleri ortadan kalkar
@@ -53,7 +66,9 @@ String bağımlılığı azaltılır
 Kod daha okunabilir ve genişletilebilir hale gelir
 
 
+
 Kullanılan Yapılar ve Teknolojiler
+
 
 
 Java 8+
@@ -67,7 +82,9 @@ Map
 Supplier (java.util.function)
 
 
+
 Proje Yapısı (Özet)
+
 
 
 Payment → Ortak arayüz
@@ -83,7 +100,9 @@ PaymentType → Ödeme türlerini temsil eden enum
 PaymentFactory → Nesne üretiminden sorumlu factory sınıfı
 
 
+
 Notlar
+
 
 
 Bu projede kullanılan yapı, klasik if-else tabanlı çözümlere kıyasla daha temiz ve sürdürülebilirdir.

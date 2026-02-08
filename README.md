@@ -24,7 +24,7 @@ Factory sınıfının sürekli değiştirilmesi
 
 
 
-Bu yaklaşım:
+Bu yaklaşım :
 
 
 
@@ -37,7 +37,7 @@ Yeni türler eklendikçe bakımı zorlaştırır
 
 
 
-Çözüm Yaklaşımı
+Çözüm Yaklaşımı : 
 
 
 
@@ -55,7 +55,7 @@ Her ödeme türü Payment arayüzünü implemente eder ve nesne oluşturma işle
 
 
 
-Bu sayede:
+Bu sayede :
 
 
 
@@ -67,7 +67,7 @@ Kod daha okunabilir ve genişletilebilir hale gelir
 
 
 
-Kullanılan Yapılar ve Teknolojiler
+Kullanılan Yapılar ve Teknolojiler : 
 
 
 
@@ -83,7 +83,7 @@ Supplier (java.util.function)
 
 
 
-Proje Yapısı (Özet)
+Proje Yapısı (Özet) : 
 
 
 
@@ -101,7 +101,7 @@ PaymentFactory → Nesne üretiminden sorumlu factory sınıfı
 
 
 
-Notlar
+Notlar : 
 
 
 

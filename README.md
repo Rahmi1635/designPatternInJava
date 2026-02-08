@@ -1,19 +1,18 @@
-Factory Pattern – Java Ödeme Sistemi Örneği
+💳 Factory Pattern – Java Ödeme Sistemi
 
-Bu proje, Factory Design Pattern’ın Java ile nasıl uygulanabileceğini göstermek amacıyla hazırlanmıştır.
-Örnek senaryo olarak bir ödeme sistemi (Payment System) ele alınmıştır.
+📌 Bu proje, Factory Design Pattern’ın Java ile nasıl uygulanabileceğini göstermek amacıyla hazırlanmıştır.
 
-Proje, klasik if-else tabanlı nesne oluşturma yaklaşımının neden problemli olduğunu ve bunun yerine daha esnek ve sürdürülebilir bir çözümün nasıl kurulabileceğini göstermektedir.
+Gerçek hayattan bir ödeme sistemi senaryosu üzerinden:
 
+❌ Kötü yaklaşım (if-else)
 
+✅ Doğru yaklaşım (Factory Pattern)
 
-Problem Tanımı : 
+net bir şekilde ele alınmıştır.
 
+❓ Problem Nedir?
 
-
-Uygulamalarda farklı türlerde nesneler oluşturulması gerektiğinde, çoğu zaman aşağıdaki gibi bir yaklaşım kullanılır:
-
-
+Çoğu projede nesne üretimi şu şekilde yapılır:
 
 if-else veya switch-case blokları
 
@@ -21,55 +20,33 @@ String karşılaştırmaları
 
 Factory sınıfının sürekli değiştirilmesi
 
+⚠️ Bu yaklaşım zamanla şu problemlere yol açar:
 
+Open/Closed Principle ihlal edilir
 
+Kod okunabilirliği düşer
 
-Bu yaklaşım :
+Yeni tür eklemek zorlaşır
 
+🛠️ Çözüm: Factory Pattern
 
+Bu projede:
 
+Nesne oluşturma sorumluluğu merkezi bir Factory yapısına taşınmıştır
 
-Open/Closed Principle (OCP)’ı ihlal eder
+Ödeme türleri enum ile temsil edilmiştir
 
-Kodun okunabilirliğini düşürür
+Nesne üretimi Map + Supplier üzerinden yapılmaktadır
 
-Yeni türler eklendikçe bakımı zorlaştırır
+🎯 Kazanımlar:
 
+✅ if-else zincirlerinden kurtulma
 
+✅ Daha okunabilir kod
 
-Çözüm Yaklaşımı : 
+✅ Daha kolay genişletilebilir yapı
 
-
-
-Bu projede, nesne oluşturma mantığı Factory Pattern kullanılarak merkezi bir yapıya taşınmıştır.
-
-Ödeme türleri:
-
-Bank Transfer
-
-Credit Card
-
-PayPal
-
-Her ödeme türü Payment arayüzünü implemente eder ve nesne oluşturma işlemi Map + Supplier yapısı üzerinden gerçekleştirilir.
-
-
-
-Bu sayede :
-
-
-
-if-else zincirleri ortadan kalkar
-
-String bağımlılığı azaltılır
-
-Kod daha okunabilir ve genişletilebilir hale gelir
-
-
-
-Kullanılan Yapılar ve Teknolojiler : 
-
-
+🧩 Kullanılan Yapılar
 
 Java 8+
 
@@ -79,33 +56,26 @@ Enum
 
 Map
 
-Supplier (java.util.function)
+Supplier
 
-
-
-Proje Yapısı (Özet) : 
-
-
+🗂️ Proje Yapısı
 
 Payment → Ortak arayüz
 
-BankTransferPayment → Somut ödeme sınıfı
+BankTransferPayment → EFT / Havale
 
-CreditCardPayment → Somut ödeme sınıfı
+CreditCardPayment → Kredi Kartı
 
-PaypalPayment → Somut ödeme sınıfı
+PaypalPayment → PayPal
 
-PaymentType → Ödeme türlerini temsil eden enum
+PaymentType → Ödeme türleri (Enum)
 
-PaymentFactory → Nesne üretiminden sorumlu factory sınıfı
+PaymentFactory → Nesne üretimi
 
+📝 Notlar
 
+💡 Bu yapı:
 
-Notlar : 
+Küçük projelerde gereksiz karmaşık olabilir
 
-
-
-Bu projede kullanılan yapı, klasik if-else tabanlı çözümlere kıyasla daha temiz ve sürdürülebilirdir.
-Ancak çok küçük projelerde bu yaklaşım gereksiz karmaşıklık yaratabilir.
-
-Ama büyüyen ve değişime açık sistemlerde Factory Pattern güçlü bir çözümdür.
+Ancak büyüyen ve değişime açık sistemler için çok güçlüdür

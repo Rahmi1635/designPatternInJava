@@ -1,81 +1,26 @@
-💳 Factory Pattern – Java Ödeme Sistemi
+# Java Design Patterns Collection
 
-📌 Bu proje, Factory Design Pattern’ın Java ile nasıl uygulanabileceğini göstermek amacıyla hazırlanmıştır.
+Bu repository, Java ile yaygın olarak kullanılan tasarım desenlerinin (Design Patterns) uygulanmış örneklerini içermektedir.
 
-Gerçek hayattan bir ödeme sistemi senaryosu üzerinden:
+Her desen:
 
-❌ Kötü yaklaşım (if-else)
+- Gerçek bir senaryo üzerinden ele alınmıştır
+- Çalışır kod örnekleriyle gösterilmiştir
+- Temel amacı ve kullanım gerekçesi açıklanmıştır
 
-✅ Doğru yaklaşım (Factory Pattern)
+## İçerikte Yer Alan Desenler
 
-net bir şekilde ele alınmıştır.
+- Factory Pattern
+- Builder Pattern (GoF ve Modern yaklaşım)
+- (Yakında) Strategy Pattern
+- (Yakında) Observer Pattern
+- (Yakında) Decorator Pattern
 
-❓ Problem Nedir?
+## Amaç
 
-Çoğu projede nesne üretimi şu şekilde yapılır:
+Bu projenin amacı:
 
-if-else veya switch-case blokları
-
-String karşılaştırmaları
-
-Factory sınıfının sürekli değiştirilmesi
-
-⚠️ Bu yaklaşım zamanla şu problemlere yol açar:
-
-Open/Closed Principle ihlal edilir
-
-Kod okunabilirliği düşer
-
-Yeni tür eklemek zorlaşır
-
-🛠️ Çözüm: Factory Pattern
-
-Bu projede:
-
-Nesne oluşturma sorumluluğu merkezi bir Factory yapısına taşınmıştır
-
-Ödeme türleri enum ile temsil edilmiştir
-
-Nesne üretimi Map + Supplier üzerinden yapılmaktadır
-
-🎯 Kazanımlar:
-
-✅ if-else zincirlerinden kurtulma
-
-✅ Daha okunabilir kod
-
-✅ Daha kolay genişletilebilir yapı
-
-🧩 Kullanılan Yapılar
-
-Java 8+
-
-Factory Design Pattern
-
-Enum
-
-Map
-
-Supplier
-
-🗂️ Proje Yapısı
-
-Payment → Ortak arayüz
-
-BankTransferPayment → EFT / Havale
-
-CreditCardPayment → Kredi Kartı
-
-PaypalPayment → PayPal
-
-PaymentType → Ödeme türleri (Enum)
-
-PaymentFactory → Nesne üretimi
-
-📝 Notlar
-
-💡 Bu yapı:
-
-Küçük projelerde gereksiz karmaşık olabilir
-
-Ancak büyüyen ve değişime açık sistemler için çok güçlüdür
+- Tasarım desenlerinin mantığını somut örneklerle göstermek
+- Klasik (GoF) ve modern yaklaşımları karşılaştırmak
+- Daha okunabilir ve sürdürülebilir kod yapıları oluşturmayı teşvik etmek
+- Referans niteliğinde bir kaynak oluşturmaktır
